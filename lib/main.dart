@@ -30,15 +30,15 @@ class MyApp extends StatelessWidget {
            Text(
              questions[questionIndex],
            ),
-           RaisedButton(
+           ElevatedButton(
              child: Text('jawab 1'),
              onPressed: answerQuestion,
            ),
-           RaisedButton(
+           ElevatedButton(
              child: Text('jawab 2'),
              onPressed: () => print('jawab 2 dipilih!'), // ini akan muncul pada debug console di visual code
            ),
-           RaisedButton(
+           ElevatedButton(
              child: Text('jawab 3'),
              onPressed: () {
                // ...
