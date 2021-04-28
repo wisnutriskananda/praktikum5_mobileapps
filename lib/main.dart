@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import './question.dart';
+
  
 // void main() {
 //   runApp(MyApp());
@@ -29,6 +32,9 @@ class _MyAppState extends State<MyApp> {
    var questions = [
      'Apa warna favorit anda?',
      'apa peliharaan favorit anda?',
+     'apa film favorit anda?',
+     'apa game favorit anda?',
+     'siapa pemain sepak bola favorit anda?',
    ];
    return MaterialApp(
      home: Scaffold(
@@ -37,18 +43,18 @@ class _MyAppState extends State<MyApp> {
        ),
        body: Column(
          children: [
-           Text(
+           Question(
              questions[_questionIndex],
            ),
-           RaisedButton(
+           ElevatedButton(
              child: Text('jawab 1'),
              onPressed: _answerQuestion,
            ),
-           RaisedButton(
+           ElevatedButton(
              child: Text('jawab 2'),
              onPressed: () => print('jawab 2 dipilih!'),
            ),
-           RaisedButton(
+           ElevatedButton(
              child: Text('jawab 3'),
              onPressed: () {
                print('jawab 3 dipilih');
